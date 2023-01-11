@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def add(a, b):
-    print(a + b, end='\n')
+    return a + b
+    print()
