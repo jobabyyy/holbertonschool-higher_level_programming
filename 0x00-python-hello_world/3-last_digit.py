@@ -11,4 +11,4 @@ if last > 5:
 if last == 0:
     print('and is 0')
 if last < 6 and last != 0:
-    print('and is less than 6 and not 0\n')
+    print('and is less than 6 and not 0')
