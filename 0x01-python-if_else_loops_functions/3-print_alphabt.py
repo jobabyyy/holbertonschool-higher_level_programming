@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-alphabet = ""
-for i in range(ord('a'), ord('z')+1):
-    if chr(i) not in ['q', 'e']:
-        alphabet += chr(i)
-print(alphabet)
+for letters in range(ord('a'), ord('z')+1):
+    letters = chr(letters)
+    if letters not in "qe":
+        print(letters, end="")
+    
 
