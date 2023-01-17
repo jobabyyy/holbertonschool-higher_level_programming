@@ -1,4 +1,4 @@
-#!/isr/bin/python3
+#!/usr/bin/python3
 """This is a square Module"""
 
 
