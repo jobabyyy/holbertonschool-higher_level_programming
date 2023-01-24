@@ -47,5 +47,6 @@ class Rectangle:
         rizz = rizz * self.__height
         rizz = rizz[:-1]
         return rizz
+
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
