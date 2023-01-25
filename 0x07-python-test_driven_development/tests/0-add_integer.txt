@@ -1,7 +1,53 @@
 Function usgage for ``add_integer(a, b=98)``
+
+# run test with python3 -m doctest -v ./tests/0-add_integer.txt 
+
+===============================
+How to use 0-add_integer.python
+===============================
+
+``add_integer(...)`` returns sum of its args. For nums, 
+that value is equivalent to using ``+`` operator.
+
+
 >>> add_integer = __import__('0-add_integer').add_integer
+
+GOOD USER
+=========
 
 ::
 
-    >>> add_integer(3,6)
-    9
+    >>> add_integer(2.0, 3)
+    5
+
+How it works with Floating-point values...
+
+::
+
+    >>> add_integer(-2.9, 3.0)
+    1
+
+::
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+        >>> add_integer(11, 22, 33)
+        Traceback (most recent call last):
+        TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+::
+
+        >>> add_integer(float("inf"))
+        Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
+
+::
+
+        >>> add_integer(float("-inf"))
+        Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
+
