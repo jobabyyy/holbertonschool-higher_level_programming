@@ -1,0 +1,100 @@
+# run test with python3 -m doctest -v ./tests/2-matrix_divided.txt
+
+===============================
+ How to Use 2-matrix_divided.py
+===============================
+
+Function usage for ``matrix_divided(matrix, div)``.
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+GOOD USER
+=========
+
+
+::
+
+    >>> matrix_divided([[-2.2, 4.4, 6.6], [-1.1, 2.2, 3.3]], 3)
+    [[-0.73, 1.47, 2.2], [-0.37, 0.73, 1.1]]
+
+
+::
+
+    >>> matrix = [
+    ...    [8, 6, 7],
+    ...    [5, 3, 0]
+    ... ]
+    >>> matrix_divided(matrix, 1)
+    [[8.0, 6.0, 7.0], [5.0, 3.0, 0.0]]
+
+Can use both ints and floats
+
+::
+
+    >>> matrix = [
+    ...    [8, 6, 7],
+    ...    [5.5, 3.3, 0.1]
+    ... ]
+    >>> matrix_divided(matrix, 1)
+    [[8.0, 6.0, 7.0], [5.5, 3.3, 0.1]]
+
+
+::
+
+    >>> matrix = [[]]
+    >>> matrix_divided(matrix, 1)
+    [[]]
+
+BAD USER
+========
+
+
+::
+
+    >>> matrix_divided(None, 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+::
+
+    >>> matrix = [
+    ...    [8, 6, 7],
+    ...    [5, 3, 0]
+    ... ]
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+
+::
+
+    >>> matrix = [
+    ...    [8, 6, 7],
+    ...    [5, 3, 0, 9]
+    ... ]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+
+::
+
+    >>> matrix = [
+    ...    [8, 6, 7],
+    ...    [5, 3, 0]
+    ... ]
+    >>> matrix_divided(matrix, "BADUSER!")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+
+::
+
+    >>> matrix = [
+    ...    [8, 6, 7],
+    ...    [5, 3, 0]
+    ... ]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
