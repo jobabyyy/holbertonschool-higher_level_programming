@@ -12,3 +12,4 @@ class MyClass:
 
 my_obj = MyClass()
 print(lookup(my_obj))
+
