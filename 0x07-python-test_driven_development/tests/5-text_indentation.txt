@@ -1,0 +1,148 @@
+# run test with python3 -m doctest -v ./tests/5-text_indentation.txt
+
+===============================
+ How to Use 5-text_indentation.py
+===============================
+
+Function usage for ``text_indentation(text)``.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+GOOD USER
+=========
+
+User can print 2 nlcs after all '.' '?' ':'
+
+::
+
+    >>> text_indentation("Flux.These?Stupid:Tests")
+    Flux.
+    <BLANKLINE>
+    These?
+    <BLANKLINE>
+    Stupid:
+    <BLANKLINE>
+    Tests
+
+::
+
+    >>> text_indentation("What?\nEver")
+    What?
+    <BLANKLINE>
+    <BLANKLINE>
+    Ever
+
+::
+
+    >>> text_indentation("yolo")
+    yolo
+
+::
+
+    >>> text_indentation("hate doc tests?")
+    hate doc tests?
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("un \n real.")
+    un
+    real.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("?")
+    ?
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("     sigh")
+    sigh
+
+::
+
+    >>> text_indentation("    sigh.   ")
+    sigh.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("What..ever")
+    What.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    ever
+
+::
+
+    >>> text_indentation("What.\never.")
+    What.
+    <BLANKLINE>
+    <BLANKLINE>
+    ever.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("\n\nWhat..ever")
+    <BLANKLINE>
+    <BLANKLINE>
+    What.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    ever
+
+::
+
+    >>> text_indentation("This  .   test")
+    This  .
+    <BLANKLINE>
+    test
+    
+
+::
+
+    >>> text_indentation(" ")
+
+BAD USER
+========
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(88)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(["no", "lists"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation({"no": "if", "dicts": "please"})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(("freaking", "tups"))
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
