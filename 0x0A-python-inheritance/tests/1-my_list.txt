@@ -1,0 +1,24 @@
+import unittest
+from my_list import MyList
+
+class TestMyList(unittest.TestCase):
+    def test_print_sorted(self):
+        my_list = MyList([3, 2, 1])
+        # Ensure that the list is printed in sorted order
+        with self.assertPrints('[1, 2, 3]'):
+            my_list.print_sorted()
+            
+    def test_print_sorted_with_negative_numbers(self):
+        my_list = MyList([3, -2, 1])
+        # Ensure that the list is printed in sorted order
+        with self.assertPrints('[-2, 1, 3]'):
+            my_list.print_sorted()
+            
+    def test_print_sorted_with_float_numbers(self):
+        my_list = MyList([3.2, -2.5, 1.1])
+        # Ensure that the list is printed in sorted order
+        with self.assertPrints('[-2.5, 1.1, 3.2]'):
+            my_list.print_sorted()
+
+if __name__ == '__main__':
+    unittest.main()
