@@ -1,15 +1,7 @@
 #!/usr/bin/python3
+"""print me up"""
+
+
 def lookup(obj):
+    """look at me"""
     return dir(obj)
-
-class MyClass:
-    def __init__(self):
-        self.x = 5
-        self.y = 10
-
-    def my_method(self):
-        return self.x + self.y
-
-my_obj = MyClass()
-print(lookup(my_obj))
-
