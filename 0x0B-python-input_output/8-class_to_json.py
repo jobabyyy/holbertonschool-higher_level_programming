@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """CLASS OBJECT"""
 
+
 def class_to_json(obj):
     """comment"""
     obj_dict = {}
