@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """pub method"""
 
+
 class Student:
     """load from json file"""
     def __init__(self, first_name, last_name, age):
