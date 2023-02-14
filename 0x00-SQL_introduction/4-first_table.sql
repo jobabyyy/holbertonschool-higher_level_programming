@@ -1,4 +1,3 @@
 -- FIRST TABLE
-CREATE TABLE IF NOT EXISTS ${DB_NAME}.first_table (
-id INT,
+CREATE TABLE IF NOT EXISTS ${DB_NAME}.first_table (id INT,
 name VARCHAR(256));
