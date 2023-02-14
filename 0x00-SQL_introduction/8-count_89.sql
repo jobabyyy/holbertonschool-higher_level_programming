@@ -1,0 +1,2 @@
+-- DISPLAY RECORDS
+SELECT COUNT(*) FROM first_table WHERE id = 89;
