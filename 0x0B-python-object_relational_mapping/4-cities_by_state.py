@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""list cities"""
+"""list  da cities"""
 import sys
 import MySQLdb
 
