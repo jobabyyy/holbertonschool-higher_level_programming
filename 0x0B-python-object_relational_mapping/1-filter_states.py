@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""test comment"""
+"""lsiting all states"""
 import sys
 import MySQLdb
 

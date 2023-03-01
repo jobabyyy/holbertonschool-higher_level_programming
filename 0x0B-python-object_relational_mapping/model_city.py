@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""State Class"""
-from sqlalchemy import String, Integer, Column
+"""City Class"""
+from sqlalchemy import String, Integer, Column, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class State(Base):
+class City(Base):
     """subclass of Base"""
-    __tablename__ = 'states'
+    __tablename__ = 'cities'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
