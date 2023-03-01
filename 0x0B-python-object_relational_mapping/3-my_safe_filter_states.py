@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a sql injection"""
+"""sql injection"""
 import sys
 import MySQLdb
 

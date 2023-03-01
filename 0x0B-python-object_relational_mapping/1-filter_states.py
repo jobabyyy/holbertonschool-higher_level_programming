@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lsiting all states"""
+"""listing all states"""
 import sys
 import MySQLdb
 

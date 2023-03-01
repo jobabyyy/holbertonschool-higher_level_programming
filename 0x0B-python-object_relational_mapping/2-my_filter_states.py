@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""connecting"""
+"""connecting them"""
 import sys
 import MySQLdb
 
