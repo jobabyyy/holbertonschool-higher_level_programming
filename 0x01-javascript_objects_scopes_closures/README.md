@@ -16,3 +16,6 @@
 ## General
 
 This table of contents covers various aspects of JavaScript programming, including its benefits, creating objects, understanding variables and scope, closures, prototypes, and inheritance. It also provides information on key concepts such as this and undefined, as well as practical tips on using functions, loops, and arithmetic operators
+
+
+Image source: [dmitryfrank.com/articles/js_closures](https://dmitryfrank.com/articles/js_closures) (Frank, Dmitry)
