@@ -18,5 +18,5 @@ request(apiUrl, (error, response, body) => {
     }
   });
 
-  console.log(`Wedge Antilles appears in ${count} Star Wars movies.`);
+  console.log(count);
 });
