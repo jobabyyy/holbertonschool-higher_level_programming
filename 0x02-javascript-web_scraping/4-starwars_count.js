@@ -9,9 +9,14 @@ request(apiUrl, (error, response, body) => {
   }
 
   const movieData = JSON.parse(body);
-  const count = movieData.results.filter(movie =>
-    movie.characters.includes('https://swapi-api.hbtn.io/api/people/18/')
-  ).length;
+  let count = 0;
+
+  for (let i = 0; i < movieData.results.length; i++) {
+    const characterUrls = movieData.results[i].characters;
+    if (characterUrls.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+      count++;
+    }
+  }
 
   console.log(count);
 });
